@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using McMaster.Extensions.CommandLineUtils;
@@ -24,11 +25,22 @@ namespace QwFrmtr
                 .Build();
             var fromPath = Configuration["fromPath"];
             var toPath = Configuration["toPath"];
-            // Console.WriteLine(Environment.SystemDirectory);
-            var json = File.OpenText($"{fromPath}{fileName}").ReadToEnd();
-           // Console.WriteLine(json);
+
+            var json = File.OpenText($"{fromPath}{fileName}").ReadToEnd(); 
+            // reformat all caps
+            var regCap = new Regex("\"[A-Z]*\":");
+            var matches = regCap.Matches(json);
+            foreach (var match in matches)
+            {
+               Console.WriteLine(match.ToString());
+               var value = formatter.Format(match.ToString());
+               Console.WriteLine(value);
+               json = json.Replace(match.ToString(), value);
+            }
+           
+            // reformat underscores
             var reg = new Regex(("\"([A-Za-z]*_[A-Za-z]*)*\":"));
-            var matches = reg.Matches(json);
+            matches = reg.Matches(json);
           
             foreach (var match in matches)
             {
