@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwFrmtr", "QwFrmtr.csproj", "{99BCC8DE-10AD-4604-AD1C-0FCDD3C25A48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QwFrmtrTest", "QwFrmtrTest\QwFrmtrTest.csproj", "{0E10BD00-F546-4033-BA09-2204075808E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99BCC8DE-10AD-4604-AD1C-0FCDD3C25A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99BCC8DE-10AD-4604-AD1C-0FCDD3C25A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99BCC8DE-10AD-4604-AD1C-0FCDD3C25A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99BCC8DE-10AD-4604-AD1C-0FCDD3C25A48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E10BD00-F546-4033-BA09-2204075808E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E10BD00-F546-4033-BA09-2204075808E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E10BD00-F546-4033-BA09-2204075808E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E10BD00-F546-4033-BA09-2204075808E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
